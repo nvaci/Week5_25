@@ -4,7 +4,7 @@
     <title>Lecture 5: SEM (Path models)</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr Nemanja Vaci" />
-    <meta name="date" content="2025-03-13" />
+    <meta name="date" content="2025-03-27" />
     <script src="Week5_files/header-attrs/header-attrs.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
@@ -22,7 +22,7 @@ class: center, middle, inverse, title-slide
 ### University of Sheffield
 ]
 .date[
-### 2025-03-13
+### 2025-03-27
 ]
 
 ---
@@ -322,8 +322,41 @@ summary(fit1)
 ```
 
 ```
-## Length  Class   Mode 
-##      1 lavaan     S4
+## lavaan 0.6.15 ended normally after 1 iteration
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of model parameters                         8
+## 
+##   Number of observations                           100
+## 
+## Model Test User Model:
+##                                                       
+##   Test statistic                               215.236
+##   Degrees of freedom                                 1
+##   P-value (Chi-square)                           0.000
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                             Standard
+##   Information                                 Expected
+##   Information saturated (h1) model          Structured
+## 
+## Regressions:
+##                    Estimate    Std.Err   z-value  P(&gt;|z|)
+##   SocialBeh ~                                            
+##     Nutrition           0.030     1.105    0.027    0.978
+##     PhyExer             1.281     0.146    8.796    0.000
+##     GMA                -0.075     0.151   -0.500    0.617
+##   CognitiveAb ~                                          
+##     SocialBeh           9.579     0.469   20.428    0.000
+##     Nutrition           7.019     6.899    1.017    0.309
+##     GMA                 2.461     0.941    2.614    0.009
+## 
+## Variances:
+##                    Estimate    Std.Err   z-value  P(&gt;|z|)
+##    .SocialBeh        5515.809   780.053    7.071    0.000
+##    .CognitiveAb    215129.001 30423.835    7.071    0.000
 ```
 
 ---
@@ -350,8 +383,73 @@ summary(fit1, fit.measures=TRUE)
 ```
 
 ```
-## Length  Class   Mode 
-##      1 lavaan     S4
+## lavaan 0.6.15 ended normally after 1 iteration
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of model parameters                         8
+## 
+##   Number of observations                           100
+## 
+## Model Test User Model:
+##                                                       
+##   Test statistic                               215.236
+##   Degrees of freedom                                 1
+##   P-value (Chi-square)                           0.000
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                               438.108
+##   Degrees of freedom                                 7
+##   P-value                                        0.000
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    0.503
+##   Tucker-Lewis Index (TLI)                      -2.479
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)              -1328.506
+##   Loglikelihood unrestricted model (H1)      -1220.888
+##                                                       
+##   Akaike (AIC)                                2673.012
+##   Bayesian (BIC)                              2693.853
+##   Sample-size adjusted Bayesian (SABIC)       2668.587
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          1.464
+##   90 Percent confidence interval - lower         1.303
+##   90 Percent confidence interval - upper         1.632
+##   P-value H_0: RMSEA &lt;= 0.050                    0.000
+##   P-value H_0: RMSEA &gt;= 0.080                    1.000
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.080
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                             Standard
+##   Information                                 Expected
+##   Information saturated (h1) model          Structured
+## 
+## Regressions:
+##                    Estimate    Std.Err   z-value  P(&gt;|z|)
+##   SocialBeh ~                                            
+##     Nutrition           0.030     1.105    0.027    0.978
+##     PhyExer             1.281     0.146    8.796    0.000
+##     GMA                -0.075     0.151   -0.500    0.617
+##   CognitiveAb ~                                          
+##     SocialBeh           9.579     0.469   20.428    0.000
+##     Nutrition           7.019     6.899    1.017    0.309
+##     GMA                 2.461     0.941    2.614    0.009
+## 
+## Variances:
+##                    Estimate    Std.Err   z-value  P(&gt;|z|)
+##    .SocialBeh        5515.809   780.053    7.071    0.000
+##    .CognitiveAb    215129.001 30423.835    7.071    0.000
 ```
 
 ---
@@ -382,8 +480,73 @@ summary(fit2, fit.measures=TRUE)
 ```
 
 ```
-## Length  Class   Mode 
-##      1 lavaan     S4
+## lavaan 0.6.15 ended normally after 1 iteration
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of model parameters                         9
+## 
+##   Number of observations                           100
+## 
+## Model Test User Model:
+##                                                       
+##   Test statistic                                 0.000
+##   Degrees of freedom                                 0
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                               438.108
+##   Degrees of freedom                                 7
+##   P-value                                        0.000
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    1.000
+##   Tucker-Lewis Index (TLI)                       1.000
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)              -1220.888
+##   Loglikelihood unrestricted model (H1)      -1220.888
+##                                                       
+##   Akaike (AIC)                                2459.776
+##   Bayesian (BIC)                              2483.222
+##   Sample-size adjusted Bayesian (SABIC)       2454.798
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.000
+##   90 Percent confidence interval - lower         0.000
+##   90 Percent confidence interval - upper         0.000
+##   P-value H_0: RMSEA &lt;= 0.050                       NA
+##   P-value H_0: RMSEA &gt;= 0.080                       NA
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.000
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                             Standard
+##   Information                                 Expected
+##   Information saturated (h1) model          Structured
+## 
+## Regressions:
+##                    Estimate   Std.Err  z-value  P(&gt;|z|)
+##   SocialBeh ~                                          
+##     Nutrition          0.030    1.105    0.027    0.978
+##     PhyExer            1.281    0.146    8.796    0.000
+##     GMA               -0.075    0.151   -0.500    0.617
+##   CognitiveAb ~                                        
+##     SocialBeh          5.701    0.213   26.781    0.000
+##     Nutrition          8.548    2.352    3.634    0.000
+##     GMA                2.814    0.321    8.764    0.000
+##     PhyExer           11.390    0.413   27.577    0.000
+## 
+## Variances:
+##                    Estimate   Std.Err  z-value  P(&gt;|z|)
+##    .SocialBeh       5515.809  780.053    7.071    0.000
+##    .CognitiveAb    24999.990 3535.532    7.071    0.000
 ```
 
 ---
@@ -466,8 +629,47 @@ summary(fitPath)
 ```
 
 ```
-## Length  Class   Mode 
-##      1 lavaan     S4
+## lavaan 0.6.15 ended normally after 1 iteration
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of model parameters                         8
+## 
+##   Number of observations                           100
+## 
+## Model Test User Model:
+##                                                       
+##   Test statistic                                12.401
+##   Degrees of freedom                                 1
+##   P-value (Chi-square)                           0.000
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                             Standard
+##   Information                                 Expected
+##   Information saturated (h1) model          Structured
+## 
+## Regressions:
+##                    Estimate   Std.Err  z-value  P(&gt;|z|)
+##   SocialBeh ~                                          
+##     Nutrition          0.030    1.105    0.027    0.978
+##     PhyExer    (a)     1.281    0.146    8.796    0.000
+##     GMA               -0.075    0.151   -0.500    0.617
+##   CognitiveAb ~                                        
+##     SocialBeh  (b)     5.704    0.227   25.180    0.000
+##     PhyExer    (c)    11.355    0.439   25.846    0.000
+##     GMA                2.813    0.342    8.233    0.000
+## 
+## Variances:
+##                    Estimate   Std.Err  z-value  P(&gt;|z|)
+##    .SocialBeh       5515.809  780.053    7.071    0.000
+##    .CognitiveAb    28300.616 4002.312    7.071    0.000
+## 
+## Defined Parameters:
+##                    Estimate   Std.Err  z-value  P(&gt;|z|)
+##     indirect           7.308    0.880    8.304    0.000
+##     direct            11.355    0.439   25.846    0.000
+##     total             18.664    0.894   20.879    0.000
 ```
 ???
 Interaction between the predictors can be included similar to the linear regression model by using (:) sign.&lt;br/&gt; &lt;br/&gt;
@@ -547,13 +749,20 @@ summary(model1, .progressBar=FALSE)
 ## ---
 ## Coefficients:
 ## 
-##      Response Predictor Estimate Std.Error DF Crit.Value P.Value Std.Estimate    
-##     SocialBeh Nutrition   0.0300    1.1278 96     0.0266  0.9789       0.0020    
-##     SocialBeh   PhyExer   1.2814    0.1487 96     8.6187  0.0000       0.6604 ***
-##     SocialBeh       GMA  -0.0753    0.1538 96    -0.4899  0.6253      -0.0375    
-##   CognitiveAb SocialBeh   9.5792    0.4786 96    20.0156  0.0000       0.9023 ***
-##   CognitiveAb Nutrition   7.0193    7.0413 96     0.9969  0.3213       0.0447    
-##   CognitiveAb       GMA   2.4607    0.9607 96     2.5614  0.0120       0.1155   *
+##      Response Predictor Estimate Std.Error DF Crit.Value P.Value Std.Estimate
+##     SocialBeh Nutrition   0.0300    1.1278 96     0.0266  0.9789       0.0020
+##     SocialBeh   PhyExer   1.2814    0.1487 96     8.6187  0.0000       0.6604
+##     SocialBeh       GMA  -0.0753    0.1538 96    -0.4899  0.6253      -0.0375
+##   CognitiveAb SocialBeh   9.5792    0.4786 96    20.0156  0.0000       0.9023
+##   CognitiveAb Nutrition   7.0193    7.0413 96     0.9969  0.3213       0.0447
+##   CognitiveAb       GMA   2.4607    0.9607 96     2.5614  0.0120       0.1155
+##      
+##      
+##   ***
+##      
+##   ***
+##      
+##     *
 ## 
 ##   Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05
 ## 
